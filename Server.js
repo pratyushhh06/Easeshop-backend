@@ -16,11 +16,7 @@ app.use(express.json());
 
 
 
-app.use(cors({
-    origin: 'http://localhost:3000', // React app's URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true, // Allow credentials (cookies, auth headers, etc.)
-}));
+app.use(cors());
 
 
 app.use('/api/v1/auth' ,authRoutes);
